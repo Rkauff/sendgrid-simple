@@ -39,7 +39,7 @@ def sendgrid_email():
                    html_content="Good afternoon! <br/>"\
                        "The Fed Funds Rate is: " + str(todays_fed_rate) + ". The rate " + fed_up_or_down() + " " + " " + str(fed_rate_delta()) +\
                         " Thanks! Ryan")
-    sg = SendGridAPIClient("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")
+    sg = SendGridAPIClient("your API Key here")
     response = sg.send(message)
     print(response.status_code, response.body)
 
